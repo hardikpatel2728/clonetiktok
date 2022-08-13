@@ -1,6 +1,8 @@
 import 'package:clonetiktok/view/widget/text_input.dart';
 import 'package:flutter/material.dart';
 
+import '../../widget/glitch.dart';
+
 class LoginScreen extends StatelessWidget {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -13,7 +15,7 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Person Vidz",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w900),),
+            GlithEffect(child: Text("Person Vidz",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w900),)),
             SizedBox(height: 30,),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20),
