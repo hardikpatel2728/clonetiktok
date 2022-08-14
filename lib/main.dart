@@ -1,4 +1,5 @@
 import 'package:clonetiktok/constants.dart';
+import 'package:clonetiktok/view/screens/auth/Signup_Screen.dart';
 import 'package:clonetiktok/view/screens/auth/login_Screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,11 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Person Vidz',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor
       ),
-      home:LoginScreen(),
+      home:SignupScreen(),
     );
   }
 }
