@@ -1,11 +1,12 @@
+import 'package:clonetiktok/controller/auth_controller.dart';
 import 'package:clonetiktok/view/widget/text_input.dart';
 import 'package:flutter/material.dart';
 
 import '../../widget/glitch.dart';
 
 class LoginScreen extends StatelessWidget {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class LoginScreen extends StatelessWidget {
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 20),
                 child: TextInputField(
-                    controller: emailController,
+                    controller: _emailController,
                     myIcon: Icons.email,
                     myLableText: "Email"),
               ),
@@ -32,7 +33,7 @@ class LoginScreen extends StatelessWidget {
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 20),
                 child: TextInputField(
-                  controller: passwordController,
+                  controller: _passwordController,
                   myIcon: Icons.lock,
                   myLableText: "Password",
                   toHide: true,
@@ -42,7 +43,9 @@ class LoginScreen extends StatelessWidget {
                 height: 30,
               ),
               ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    AuthController.instance.Login(_emailController.text, _passwordController.text);
+                  },
                   child: Container(
                       padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
                       child: Text("Login")))
