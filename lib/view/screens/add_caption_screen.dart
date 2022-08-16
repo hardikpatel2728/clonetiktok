@@ -1,8 +1,10 @@
 import 'dart:io';
 import 'package:clonetiktok/constants.dart';
+import 'package:clonetiktok/controller/Upload_video_Controller.dart';
 import 'package:clonetiktok/view/widget/text_input.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
+import 'package:get/get.dart';
 
 class addCaption_screen extends StatefulWidget {
   File videoFile;
@@ -20,6 +22,8 @@ class _addCaption_screenState extends State<addCaption_screen> {
   late VideoPlayerController videoPlayerController;
   TextEditingController songNameController = TextEditingController();
   TextEditingController captionController = TextEditingController();
+  VideoUploadController videoUploadController = Get.put(VideoUploadController());
+
 
   @override
   void initState() {
@@ -63,7 +67,7 @@ class _addCaption_screenState extends State<addCaption_screen> {
                       myLableText: "Caption"),
                   SizedBox(height: 10,),
                   ElevatedButton(onPressed: () {
-
+                      videoUploadController.uploadVideo(songNameController.text, captionController.text, widget.videoPath);
                   }, child: Text("Upload"),style: ElevatedButton.styleFrom(primary: buttonColor)),
                 ],
               ),
