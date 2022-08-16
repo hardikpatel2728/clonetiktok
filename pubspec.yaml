@@ -40,6 +40,9 @@ dependencies:
   cloud_firestore:
   firebase_core:
   firebase_storage:
+  video_player:
+  uuid:
+  video_compress:
 
 
 dev_dependencies:

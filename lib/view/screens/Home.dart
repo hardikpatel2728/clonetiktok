@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 label: 'Profile'),
           ]),
       body: Center(
-        child: Text(pageindex[pageidx]),
+        child: pageindex[pageidx]
       ),
     );
   }

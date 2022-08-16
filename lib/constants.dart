@@ -1,13 +1,14 @@
+import 'package:clonetiktok/view/screens/add_video.dart';
 import 'package:flutter/material.dart';
 
 const backgroundColor = Colors.black;
 var buttonColor = Colors.red[400];
 const borderColor = Colors.grey;
 
-const pageindex = [
-  'Home',
-  'Search',
-  'Upload Video',
-  'Message',
-  'Profile'
+var pageindex = [
+  Text('Home'),
+  Text('Search'),
+  addVideo_screen(),
+  Text('Message'),
+  Text('Profile')
 ];
